@@ -174,8 +174,17 @@ html {
 }
 
 .card img {
-  height: 150px;
+  height: 200px;
   object-fit: cover;
+}
+#projects .card {
+  transition: all 0.3s ease-in-out;
+}
+
+/* When you hover over a card, it will scale up and get a subtle glow */
+#projects .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 193, 7, 0.5); /* Accent color glow */
 }
 .full-section {
   min-height: 100vh;
@@ -198,4 +207,34 @@ form input:focus,
 form textarea:focus {
   background-color: #343a40;
   color: #fff;
+}
+#contact form {
+  background-color: #1c1c1c; /* A slightly lighter dark shade */
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid #343a40;
+  transition: all 0.3s ease;
+}
+
+#contact form:hover {
+  border-color: #ffc107; /* Glow border on hover */
+}
+
+/* Make the input fields glow with your accent color when clicked */
+#contact .form-control:focus {
+  background-color: #343a40;
+  color: #fff;
+  border-color: #ffc107;
+  box-shadow: 0 0 10px rgba(255, 193, 7, 0.5); /* Accent color glow */
+}
+
+/* Make the 'Send Message' button more interactive */
+#contact .btn-warning {
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+#contact .btn-warning:hover {
+  transform: translateY(-3px); /* Lifts the button up slightly */
+  box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4);
 }

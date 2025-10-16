@@ -174,7 +174,7 @@ html {
 }
 
 .card img {
-  height: 200px;
+  height: 300px;
   object-fit: cover;
 }
 #projects .card {
@@ -207,34 +207,62 @@ form input:focus,
 form textarea:focus {
   background-color: #343a40;
   color: #fff;
-}
+}/* =================================== */
+/* UPGRADED 'CONTACT ME' SECTION      */
+/* =================================== */
+
+/* Style the form as a distinct panel */
 #contact form {
   background-color: #1c1c1c; /* A slightly lighter dark shade */
-  padding: 2rem;
-  border-radius: 10px;
-  border: 1px solid #343a40;
-  transition: all 0.3s ease;
+  padding: 2.5rem; /* More spacing inside the form */
+  border-radius: 8px;
+  border: 1px solid #343a40; /* Subtle border */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Add a glow effect when the user hovers over the form area */
 #contact form:hover {
-  border-color: #ffc107; /* Glow border on hover */
+  border-color: rgba(255, 193, 7, 0.5); /* Semi-transparent accent color */
+  box-shadow: 0 0 20px rgba(255, 193, 7, 0.15);
 }
 
-/* Make the input fields glow with your accent color when clicked */
-#contact .form-control:focus {
-  background-color: #343a40;
+/* Style the labels for a cleaner look */
+#contact .form-label {
+  color: #adb5bd; /* Softer text color */
+  font-size: 0.9rem;
+}
+
+/* Modern, minimalist style for input fields */
+#contact .form-control {
+  background-color: transparent;
+  border: none; /* Remove the default box border */
+  border-radius: 0; /* Remove rounded corners for a sharp look */
+  border-bottom: 2px solid #495057; /* Underline effect */
   color: #fff;
-  border-color: #ffc107;
-  box-shadow: 0 0 10px rgba(255, 193, 7, 0.5); /* Accent color glow */
+  padding-left: 0; /* Align text to the left */
+  transition: border-color 0.3s ease;
 }
 
-/* Make the 'Send Message' button more interactive */
+#contact .form-control::placeholder {
+  color: #6c757d; /* Make placeholder text less prominent */
+}
+
+/* When a user clicks an input field, the bottom border glows */
+#contact .form-control:focus {
+  background-color: transparent;
+  box-shadow: none; /* Remove Bootstrap's default blue glow */
+  border-bottom-color: #ffc107; /* Use your accent color */
+}
+
+/* Make the 'Send Message' button more dynamic */
 #contact .btn-warning {
   transition: all 0.3s ease;
   font-weight: 600;
+  padding: 12px 30px; /* Make the button slightly larger */
+  border-radius: 50px; /* Pill-shaped button */
 }
 
 #contact .btn-warning:hover {
-  transform: translateY(-3px); /* Lifts the button up slightly */
-  box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4);
+  transform: translateY(-4px); /* Lifts the button up more */
+  box-shadow: 0 5px 20px rgba(255, 193, 7, 0.4);
 }

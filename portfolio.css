@@ -229,18 +229,16 @@ form textarea:focus {
 /* Style the labels for a cleaner look */
 #contact .form-label {
   color: #adb5bd; /* Softer text color */
+  margin-bottom: 0.5rem;
   font-size: 0.9rem;
 }
 
 /* Modern, minimalist style for input fields */
 #contact .form-control {
-  background-color: transparent;
-  border: none; /* Remove the default box border */
-  border-radius: 0; /* Remove rounded corners for a sharp look */
-  border-bottom: 2px solid #495057; /* Underline effect */
-  color: #fff;
-  padding-left: 0; /* Align text to the left */
-  transition: border-color 0.3s ease;
+  background-color: #212529; /* A solid, dark background for the box */
+  border: 1px solid #495057; /* A full, subtle border */
+  border-radius: 6px;       /* This makes the corners curved! */
+  padding: 0.75rem;         /* Add some internal spacing */
 }
 
 #contact .form-control::placeholder {
@@ -249,9 +247,9 @@ form textarea:focus {
 
 /* When a user clicks an input field, the bottom border glows */
 #contact .form-control:focus {
-  background-color: transparent;
-  box-shadow: none; /* Remove Bootstrap's default blue glow */
-  border-bottom-color: #ffc107; /* Use your accent color */
+  border-color: #ffc107; /* Your accent color */
+  background-color: #212529;
+  box-shadow: 0 0 10px rgba(255, 193, 7, 0.5); /* Accent color glow */
 }
 
 /* Make the 'Send Message' button more dynamic */

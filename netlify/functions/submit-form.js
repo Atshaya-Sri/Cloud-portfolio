@@ -33,6 +33,7 @@ exports.handler = async function(event) {
     const mailOptions = {
       from: `"Portfolio Site" <${process.env.GMAIL_ADDRESS}>`,
       to: process.env.GMAIL_ADDRESS,
+      replyTo: formData.email,
       subject: `New Message from ${formData.name}`,
       html: emailHtml,
     };

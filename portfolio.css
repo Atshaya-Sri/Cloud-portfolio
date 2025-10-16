@@ -229,7 +229,7 @@ form textarea:focus {
 /* Style the labels for a cleaner look */
 #contact .form-label {
   color: #adb5bd; /* Softer text color */
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.9rem;
   font-size: 0.9rem;
 }
 
